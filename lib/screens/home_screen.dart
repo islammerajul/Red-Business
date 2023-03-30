@@ -1,10 +1,25 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:red_business247/screens/login_screen.dart';
+import 'package:red_business247/screens/signup_screen.dart';
 import 'package:red_business247/utils/const.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int button = 0; //0 for register 1 for login
+  List<String> name = [
+    'Rony bhaiya',
+    'Shourav vai',
+    'Paul vai',
+    'Tawhid vai',
+    'Nahid vai'
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -13,16 +28,26 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(18.0),
           child: Column(
             children: [
-              CircleAvatar(
-                radius: 200,
-                child: Text("data"),
+              Container(
+                height: 350,
+                width: double.infinity,
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: name.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return CircleAvatar(
+                        radius: 200,
+                        child: Text("${name[index]}"),
+                      );
+                    }),
               ),
               SizedBox(
                 height: 100,
               ),
               Text(
                 "GO ONLINE IN SECONDS",
-                style: myTextStyle,
+                style: myTextStyle.copyWith(fontSize: 22),
               ),
               Padding(
                 padding:
@@ -31,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                   "Build your website with no code and grow your business with RedShops full suite of business management tools",
                   textAlign: TextAlign.center,
                   style: myTextStyle.copyWith(
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.normal,
                       color: Colors.black87),
                 ),
@@ -40,12 +65,61 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                height: 55,
+                height: 50,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8), color: Colors.grey),
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.grey[400]),
                 child: Row(
-                  children: [],
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        child: Container(
+                          height: 50,
+                          decoration: button == 0
+                              ? BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(width: 0.5),
+                                  color: Colors.white,
+                                )
+                              : null,
+                          child: Center(child: Text("Register")),
+                        ),
+                        onTap: () {
+                          setState(() {
+                            print(button);
+                            button = 0;
+                          });
+                          // Navigator.of(context).push(MaterialPageRoute(
+                          //     builder: (context) => SignUpScreen()));
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      child: InkWell(
+                        child: Container(
+                          height: 50,
+                          decoration: button == 1
+                              ? BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(width: 0.5),
+                                  color: Colors.white,
+                                )
+                              : null,
+                          child: Center(child: Text("Login")),
+                        ),
+                        onTap: () {
+                          setState(() {
+                            button = 1;
+                            print(button);
+                          });
+                          // Navigator.of(context).push(MaterialPageRoute(
+                          //     builder: (context) => LoginScreen()));
+                        },
+                      ),
+                    ),
+                  ],
                 ),
               )
             ],
