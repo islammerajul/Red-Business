@@ -4,6 +4,12 @@ import 'package:red_business247/screens/home_screen.dart';
 import 'package:red_business247/screens/login_screen.dart';
 import 'package:red_business247/screens/main_screen.dart';
 import 'package:red_business247/screens/product_screen.dart';
+import 'package:red_business247/screens/profile&password_screen/change_password.dart';
+import 'package:red_business247/screens/profile&password_screen/edit_profile_screen.dart';
+import 'package:red_business247/screens/shop_management_screens/add_item/choose_item_type.dart';
+import 'package:red_business247/screens/shop_management_screens/categories.dart';
+import 'package:red_business247/screens/shop_management_screens/category_item_edit.dart';
+import 'package:red_business247/screens/shop_management_screens/settings_screen.dart';
 import 'package:red_business247/screens/signup_screen.dart';
 import 'package:red_business247/screens/splash_screen.dart';
 
@@ -23,8 +29,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: Color(0xffdc2623),
       ),
-      home: CustomBottomNavBar(),
+      home: ChooseItemType(),
     );
   }
 }
