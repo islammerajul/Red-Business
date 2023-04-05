@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:red_business247/utils/const.dart';
+import 'package:red_business247/widgets/custom_button.dart';
+import 'package:red_business247/widgets/custom_text_field.dart';
 
 class AddItemScreen extends StatefulWidget {
   const AddItemScreen({Key? key}) : super(key: key);
@@ -13,6 +15,19 @@ class _AddItemScreenState extends State<AddItemScreen> {
   String? selected_type = 'File Upload';
   List<String> status = ['Select a status', 'Show', 'Hide'];
   String? selected_status = 'Select a status';
+  List<String> category = [
+    'Camera & Accessories',
+    'Electronics & gadgets',
+    'Fashion & Clothings',
+    'Headphone & Speaker',
+    'Interior & Furniture',
+    'SmartWatch',
+    'Software & games'
+  ];
+
+  String? selected_category = 'Camera & Accessories';
+  List<String> subcategory = ['Camera', 'Camera Accessories'];
+  String? selected_subcategory;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +57,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                   style: keywordTextStyle,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Container(
                       height: 150,
                       width: double.infinity,
@@ -53,14 +68,14 @@ class _AddItemScreenState extends State<AddItemScreen> {
                       child: Center(child: Text("Drop files here to upload"))),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Text(
                   "Thumbnail \*",
                   style: keywordTextStyle,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Container(
                       height: 150,
                       width: 120,
@@ -76,7 +91,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                       )),
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 10,
                 ),
                 Container(
                   height: 60,
@@ -115,7 +130,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Text(
                   "Type \*",
@@ -140,7 +155,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                       }),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Text(
                   "Downloadable File \*",
@@ -188,14 +203,12 @@ class _AddItemScreenState extends State<AddItemScreen> {
                       fontSize: 16, color: Colors.orange),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 Container(
-                  height: 500,
                   width: double.infinity,
-                  child: GridView.count(
-                    scrollDirection: Axis.horizontal,
-                    crossAxisCount: 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -224,9 +237,149 @@ class _AddItemScreenState extends State<AddItemScreen> {
                                 });
                               })
                         ],
-                      )
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      CustomTextField(
+                        title: 'Current Price ( \$ ) \*',
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      CustomTextField(
+                        title: 'Previous Price ( \$ )',
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
                     ],
                   ),
+                ),
+                Card(
+                  child: Container(
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Select Category \*",
+                              style: keywordTextStyle,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: DropdownButtonFormField(
+                                  hint: Text("-Selecte category-"),
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                  )),
+                                  value: selected_category,
+                                  items: category
+                                      .map((item) => DropdownMenuItem(
+                                          value: item, child: Text(item)))
+                                      .toList(),
+                                  onChanged: (item) {
+                                    setState(() {
+                                      selected_category = item ?? "";
+                                    });
+                                  }),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Select Subcategory \*",
+                              style: keywordTextStyle,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: DropdownButtonFormField(
+                                  hint: Text("-Selecte category-"),
+                                  decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(15),
+                                  )),
+                                  value: selected_subcategory,
+                                  items: subcategory
+                                      .map((item) => DropdownMenuItem(
+                                          value: item, child: Text(item)))
+                                      .toList(),
+                                  onChanged: (item) {
+                                    setState(() {
+                                      selected_subcategory = item ?? "";
+                                    });
+                                  }),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          title: "Title \*",
+                          hintText: 'Enter tags',
+                          hintStyle: hintTextStyle,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          title: "Summary \*",
+                          hintText: 'Enter Summary',
+                          hintStyle: hintTextStyle,
+                          maxlines: 2,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          title: "Description \*",
+                          hintText: 'Enter Summary',
+                          hintStyle: hintTextStyle,
+                          maxlines: 5,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          title: "Keywords \*",
+                          hintText: 'Enter Keywords',
+                          hintStyle: hintTextStyle,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        CustomTextField(
+                          title: "Meta Keyword \*",
+                          hintText: 'Enter Meta Keyword',
+                          hintStyle: hintTextStyle,
+                          maxlines: 5,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 100),
+                  child: CustomButton(
+                      onTap: () {},
+                      buttonText: 'Submit',
+                      myTextStyle: myTextStyle.copyWith(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                      )),
                 )
               ],
             ),
