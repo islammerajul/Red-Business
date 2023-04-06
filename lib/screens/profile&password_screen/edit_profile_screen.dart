@@ -176,17 +176,14 @@ class _EditProfileScrenState extends State<EditProfileScren> {
               SizedBox(
                 height: 50,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 100),
-                child: CustomButton(
-                    onTap: () {},
-                    buttonText: 'Update',
-                    myTextStyle: myTextStyle.copyWith(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    )),
-              )
+              CustomButton(
+                  onTap: () {},
+                  buttonText: 'Update',
+                  myTextStyle: myTextStyle.copyWith(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ))
             ],
           ),
         ),

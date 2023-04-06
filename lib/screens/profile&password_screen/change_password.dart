@@ -97,20 +97,17 @@ class _PasswordChangeScreenState extends State<PasswordChangeScreen> {
             SizedBox(
               height: 50,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 100),
-              child: CustomButton(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SettingsScreen()));
-                  },
-                  buttonText: 'Update',
-                  myTextStyle: myTextStyle.copyWith(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                  )),
-            )
+            CustomButton(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => SettingsScreen()));
+                },
+                buttonText: 'Update',
+                myTextStyle: myTextStyle.copyWith(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ))
           ],
         ),
       ),

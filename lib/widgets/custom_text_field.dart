@@ -3,11 +3,22 @@ import 'package:red_business247/utils/const.dart';
 
 class CustomTextField extends StatelessWidget {
   CustomTextField(
-      {Key? key, this.title, this.hintText, this.hintStyle, this.maxlines})
+      {Key? key,
+      this.title,
+      this.hintText,
+      this.hintStyle,
+      this.maxlines,
+      this.sufffixIcon,
+      this.labelText,
+      this.onTap,
+      this.controller})
       : super(key: key);
-  String? title, hintText;
+  String? title, hintText, labelText;
   TextStyle? hintStyle;
   int? maxlines;
+  dynamic onTap;
+  Widget? sufffixIcon;
+  TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +32,11 @@ class CustomTextField extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: TextField(
+            controller: controller,
+            onTap: onTap,
             decoration: InputDecoration(
+                labelText: labelText,
+                suffixIcon: sufffixIcon,
                 hintText: hintText,
                 hintStyle: hintStyle,
                 border: OutlineInputBorder(
