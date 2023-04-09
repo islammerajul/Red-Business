@@ -18,3 +18,9 @@ TextStyle hintTextStyle = GoogleFonts.roboto(
   fontSize: 16,
   fontWeight: FontWeight.normal,
 ));
+List<String> status = ['Pending', 'Processing', 'Completed', 'Rejected'];
+String? select_status = 'Processing';
+List<String> payment = ['Pending', 'Completed', 'Rejected'];
+String? select_payment_status = 'Pending';
+List<String> actions = ['Details', 'Invoice', 'Delete'];
+String? selected_action = 'Details';

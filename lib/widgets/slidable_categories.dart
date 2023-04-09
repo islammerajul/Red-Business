@@ -5,12 +5,18 @@ import 'package:red_business247/screens/shop_management_screens/category_item_ed
 
 class SlidableCategoryItem extends StatefulWidget {
   SlidableCategoryItem(
-      {Key? key, this.img, this.title, this.subtitle, this.trailing})
+      {Key? key,
+      this.img,
+      this.title,
+      this.subtitle,
+      this.trailing,
+      this.Navigation})
       : super(key: key);
   String? title;
   String? subtitle;
-  String? img;
+  String? img = "";
   String? trailing;
+  Widget? Navigation;
 
   @override
   State<SlidableCategoryItem> createState() => _SlidableCategoryItemState();

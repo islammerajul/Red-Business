@@ -4,7 +4,11 @@ import 'package:red_business247/screens/home_screen.dart';
 import 'package:red_business247/screens/login_screen.dart';
 import 'package:red_business247/screens/main_screen.dart';
 import 'package:red_business247/screens/manage_order/all_orders.dart';
+import 'package:red_business247/screens/manage_order/completed_orders.dart';
+import 'package:red_business247/screens/manage_order/processing_order.dart';
 import 'package:red_business247/screens/manage_order/report_screen.dart';
+import 'package:red_business247/screens/payment_gateways/online_gateways.dart';
+import 'package:red_business247/screens/payment_gateways/payment_gateways_options.dart';
 import 'package:red_business247/screens/product_screen.dart';
 import 'package:red_business247/screens/profile&password_screen/change_password.dart';
 import 'package:red_business247/screens/profile&password_screen/edit_profile_screen.dart';
@@ -12,7 +16,10 @@ import 'package:red_business247/screens/shop_management_screens/add_item/add_ite
 import 'package:red_business247/screens/shop_management_screens/add_item/choose_item_type.dart';
 import 'package:red_business247/screens/shop_management_screens/categories.dart';
 import 'package:red_business247/screens/shop_management_screens/category_item_edit.dart';
+import 'package:red_business247/screens/shop_management_screens/coupons.dart';
+import 'package:red_business247/screens/shop_management_screens/edit_shipping_charge.dart';
 import 'package:red_business247/screens/shop_management_screens/settings_screen.dart';
+import 'package:red_business247/screens/shop_management_screens/shipping_charge.dart';
 import 'package:red_business247/screens/signup_screen.dart';
 import 'package:red_business247/screens/splash_screen.dart';
 
@@ -34,7 +41,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Color(0xffdc2623),
       ),
-      home: AllOrders(),
+      home: ShippingCharge(),
     );
   }
 }

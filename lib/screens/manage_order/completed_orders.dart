@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:red_business247/utils/const.dart';
 
-class AllOrders extends StatefulWidget {
-  const AllOrders({Key? key}) : super(key: key);
+class CompletedOrders extends StatefulWidget {
+  const CompletedOrders({Key? key}) : super(key: key);
 
   @override
-  State<AllOrders> createState() => _AllOrdersState();
+  State<CompletedOrders> createState() => _CompletedOrdersState();
 }
 
-class _AllOrdersState extends State<AllOrders> {
+class _CompletedOrdersState extends State<CompletedOrders> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("All Orders"),
+        title: Text("Completed Orders"),
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
       ),
@@ -104,14 +104,14 @@ class _AllOrdersState extends State<AllOrders> {
                             child: DropdownButtonFormField(
                                 decoration: InputDecoration(
                                     hintText: "Select an order status",
-                                    filled: true,
-                                    fillColor: select_status == 'Pending'
-                                        ? Colors.orange
-                                        : select_status == 'Processing'
-                                            ? Colors.blue
-                                            : select_status == 'Completed'
-                                                ? Colors.green
-                                                : Colors.red,
+                                    // filled: true,
+                                    // fillColor: select_status == 'Pending'
+                                    //     ? Colors.orange
+                                    //     : select_status == 'Processing'
+                                    //         ? Colors.blue
+                                    //         : select_status == 'Completed'
+                                    //             ? Colors.green
+                                    //             : Colors.red,
                                     border: OutlineInputBorder(
                                         borderRadius:
                                             BorderRadius.circular(6))),
@@ -146,13 +146,13 @@ class _AllOrdersState extends State<AllOrders> {
                             child: DropdownButtonFormField(
                                 decoration: InputDecoration(
                                     hintText: "Select a payment status",
-                                    filled: true,
-                                    fillColor: select_payment_status ==
-                                            'Pending'
-                                        ? Colors.orange
-                                        : select_payment_status == 'Completed'
-                                            ? Colors.green
-                                            : Colors.red,
+                                    // filled: true,
+                                    // fillColor: select_payment_status ==
+                                    //         'Pending'
+                                    //     ? Colors.orange
+                                    //     : select_payment_status == 'Completed'
+                                    //         ? Colors.green
+                                    //         : Colors.red,
                                     border: OutlineInputBorder(
                                         borderRadius:
                                             BorderRadius.circular(6))),
@@ -207,8 +207,8 @@ class _AllOrdersState extends State<AllOrders> {
                                   child: DropdownButtonFormField(
                                       decoration: InputDecoration(
                                           hintText: "Select a status",
-                                          filled: true,
-                                          fillColor: Colors.blue,
+                                          // filled: true,
+                                          // fillColor: Colors.blue,
                                           border: OutlineInputBorder(
                                               borderRadius:
                                                   BorderRadius.circular(6))),
@@ -234,5 +234,6 @@ class _AllOrdersState extends State<AllOrders> {
         ),
       ),
     );
+    ;
   }
 }

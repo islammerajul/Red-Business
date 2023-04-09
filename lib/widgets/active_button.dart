@@ -20,7 +20,9 @@ class _ActiveDeactiveButtonState extends State<ActiveDeactiveButton> {
         height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
-          border: Border.all(width: 0.5),
+          border: Border.all(width: 0.2),
+          // color:
+          //     widget.onTap == () {} ? Colors.greenAccent : Colors.transparent,
         ),
         child: Center(
             child: Text(
