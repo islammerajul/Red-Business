@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:red_business247/screens/payment_gateways/offline_gateways.dart';
 import 'package:red_business247/screens/payment_gateways/online_gateways.dart';
 import 'package:red_business247/utils/const.dart';
 
@@ -17,6 +18,14 @@ class _PaymentGatewaysState extends State<PaymentGateways> {
         title: Text("Payment Gateways"),
         centerTitle: true,
         backgroundColor: Theme.of(context).primaryColor,
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => OfflineGateways()));
+              },
+              icon: Icon(Icons.payment_outlined))
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(25.0),

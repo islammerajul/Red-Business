@@ -1,8 +1,9 @@
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:red_business247/utils/const.dart';
 
-class ProfileInfo extends StatelessWidget {
+class ProfileInfo extends StatefulWidget {
   ProfileInfo(
       {Key? key,
       this.controller,
@@ -16,6 +17,21 @@ class ProfileInfo extends StatelessWidget {
   int? maxLine;
 
   @override
+  State<ProfileInfo> createState() => _ProfileInfoState();
+}
+
+class _ProfileInfoState extends State<ProfileInfo> {
+  void showToast() {
+    Fluttertoast.showToast(
+        msg: "Save on clipboard",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.BOTTOM,
+        backgroundColor: Colors.green,
+        textColor: Colors.white,
+        timeInSecForIosWeb: 2);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,24 +39,27 @@ class ProfileInfo extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Text(
-            fieldName!,
+            widget.fieldName!,
             style: keywordTextStyle,
           ),
         ),
         TextField(
-          maxLines: maxLine,
-          controller: controller,
-          keyboardType: keyboardType,
+          maxLines: widget.maxLine,
+          controller: widget.controller,
+          keyboardType: widget.keyboardType,
           decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.grey[300],
               suffixIcon: IconButton(
                 onPressed: () {
-                  if (controller.text.trim() == "") {
+                  if (widget.controller.text.trim() == "") {
                     print('enter text');
                   } else {
-                    print(controller.text);
-                    FlutterClipboard.copy(controller.text).then((value) {
-                      print('copied');
-                      print("output: ${controller.text}");
+                    print(widget.controller.text);
+                    FlutterClipboard.copy(widget.controller.text).then((value) {
+                      // print('copied');
+                      // print("output: ${widget.controller.text}");
+                      showToast();
                     });
                   }
                 },

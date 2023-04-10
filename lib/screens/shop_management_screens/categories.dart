@@ -40,67 +40,166 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           child: Column(
             children: [
               SlidableCategoryItem(
-                img: "assets/icons/head_phone.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/head_phone.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/head_phone.png",
                 title: "Headphone & Speaker",
                 subtitle: "Electronics items",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/camera.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/camera.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/camera.png",
                 title: "Camera & Accessories",
                 subtitle: "Electronics items",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/smart_watch.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/smart_watch.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/smart_watch.png",
                 title: "Smart Watch",
                 subtitle: "Electronics items",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/furniture.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/furniture.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/furniture.png",
                 title: "Interior & Furniture",
                 subtitle: "Furniture",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/fashion.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/fashion.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/fashion.png",
                 title: "Fashion & Clothing",
                 subtitle: "Clothing",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/head_phone.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/head_phone.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/head_phone.png",
                 title: "Headphone & Speaker",
                 subtitle: "Electronics items",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/camera.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/camera.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/camera.png",
                 title: "Camera & Accessories",
                 subtitle: "Electronics items",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/smart_watch.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/smart_watch.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/smart_watch.png",
                 title: "Smart Watch",
                 subtitle: "Electronics items",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/furniture.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/furniture.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/furniture.png",
                 title: "Interior & Furniture",
                 subtitle: "Furniture",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/fashion.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/fashion.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/fashion.png",
                 title: "Fashion & Clothing",
                 subtitle: "Clothing",
                 trailing: "Available",
               ),
               SlidableCategoryItem(
-                img: "assets/icons/camera.png",
+                leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 30,
+                  child: Image.asset(
+                    "assets/icons/camera.png",
+                    width: 35,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                //img: "assets/icons/camera.png",
                 title: "Camera & Accessories",
                 subtitle: "Electronics items",
                 trailing: "Available",

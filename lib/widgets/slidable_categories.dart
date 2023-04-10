@@ -4,19 +4,20 @@ import 'package:red_business247/screens/shop_management_screens/category_item_de
 import 'package:red_business247/screens/shop_management_screens/category_item_edit.dart';
 
 class SlidableCategoryItem extends StatefulWidget {
-  SlidableCategoryItem(
-      {Key? key,
-      this.img,
-      this.title,
-      this.subtitle,
-      this.trailing,
-      this.Navigation})
-      : super(key: key);
+  SlidableCategoryItem({
+    Key? key,
+    this.img,
+    this.title,
+    this.subtitle,
+    this.trailing,
+    this.leading,
+  }) : super(key: key);
   String? title;
   String? subtitle;
   String? img = "";
   String? trailing;
-  Widget? Navigation;
+
+  Widget? leading;
 
   @override
   State<SlidableCategoryItem> createState() => _SlidableCategoryItemState();
@@ -29,7 +30,7 @@ class _SlidableCategoryItemState extends State<SlidableCategoryItem> {
       child: Container(
         color: Colors.grey[200],
         child: ListTile(
-          leading: Image.asset(widget.img!),
+          leading: widget.leading,
           title: Text(widget.title!),
           subtitle: Text(widget.subtitle!),
           trailing: Container(

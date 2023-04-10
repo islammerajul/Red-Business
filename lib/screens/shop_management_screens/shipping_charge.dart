@@ -56,7 +56,6 @@ class _ShippingChargeState extends State<ShippingCharge> {
               title: "Shenzhen Aiden TechnologyCo.Ltd",
               subtitle: "Shenzhen Aiden TechnologyCo.Ltd",
               trailing: "\$3.00",
-              img: "assets/icons/company_logo.png",
             )
           ],
         ),
