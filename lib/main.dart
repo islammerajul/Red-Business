@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Color(0xffdc2623),
       ),
-      home: ShippingCharge(),
+      home: OnlineGateways(),
     );
   }
 }

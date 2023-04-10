@@ -1,3 +1,4 @@
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:red_business247/utils/const.dart';
 
@@ -31,9 +32,23 @@ class ProfileInfo extends StatelessWidget {
           controller: controller,
           keyboardType: keyboardType,
           decoration: InputDecoration(
+              suffixIcon: IconButton(
+                onPressed: () {
+                  if (controller.text.trim() == "") {
+                    print('enter text');
+                  } else {
+                    print(controller.text);
+                    FlutterClipboard.copy(controller.text).then((value) {
+                      print('copied');
+                      print("output: ${controller.text}");
+                    });
+                  }
+                },
+                icon: Icon(Icons.copy_outlined),
+              ),
               border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(6),
-          )),
+                borderRadius: BorderRadius.circular(6),
+              )),
         )
       ],
     );
