@@ -13,6 +13,11 @@ import 'package:red_business247/screens/payment_gateways/payment_gateways_option
 import 'package:red_business247/screens/product_screen.dart';
 import 'package:red_business247/screens/profile&password_screen/change_password.dart';
 import 'package:red_business247/screens/profile&password_screen/edit_profile_screen.dart';
+import 'package:red_business247/screens/settings/breadcrumb.dart';
+import 'package:red_business247/screens/settings/favicon.dart';
+import 'package:red_business247/screens/settings/logo.dart';
+import 'package:red_business247/screens/settings/preloader.dart';
+import 'package:red_business247/screens/settings/theme_screen.dart';
 import 'package:red_business247/screens/shop_management_screens/add_item/add_item_screen.dart';
 import 'package:red_business247/screens/shop_management_screens/add_item/choose_item_type.dart';
 import 'package:red_business247/screens/shop_management_screens/categories.dart';
@@ -43,7 +48,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Color(0xffdc2623),
       ),
-      home: PaymentGateways(),
+      home: ThemeScreen(),
     );
   }
 }
