@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:red_business247/screens/shop_management_screens/category_item_edit.dart';
 import 'package:red_business247/utils/const.dart';
 import 'package:red_business247/widgets/slidable_categories.dart';
+import 'package:red_business247/widgets/slidable_offline_gateways.dart';
 
 class OfflineGateways extends StatefulWidget {
   const OfflineGateways({Key? key}) : super(key: key);
@@ -24,7 +25,72 @@ class _OfflineGatewaysState extends State<OfflineGateways> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            SlidableCategoryItem(
+            // SlidableCategoryItem(
+            //   leading: CircleAvatar(
+            //     backgroundColor: Colors.white,
+            //     radius: 30,
+            //     child: Text(
+            //       "1",
+            //       style: keywordTextStyle.copyWith(fontSize: 24),
+            //     ),
+            //   ),
+            //   title: 'Bank of America',
+            //   subtitle: ' fdfsfds',
+            //   trailing: 'abcde',
+            // ),
+            // SlidableCategoryItem(
+            //   leading: CircleAvatar(
+            //     backgroundColor: Colors.white,
+            //     radius: 30,
+            //     child: Text(
+            //       "2",
+            //       style: keywordTextStyle.copyWith(fontSize: 24),
+            //     ),
+            //   ),
+            //   title: 'Bank of Asia',
+            //   subtitle: ' fdfsfds',
+            //   trailing: 'abcde',
+            // ),
+            // SlidableCategoryItem(
+            //   leading: CircleAvatar(
+            //     backgroundColor: Colors.white,
+            //     radius: 30,
+            //     child: Text(
+            //       "3",
+            //       style: keywordTextStyle.copyWith(fontSize: 24),
+            //     ),
+            //   ),
+            //   title: 'Fedarel Reserve Bank',
+            //   subtitle: ' fdfsfds',
+            //   trailing: 'abcde',
+            // ),
+            // SlidableCategoryItem(
+            //   leading: CircleAvatar(
+            //     backgroundColor: Colors.white,
+            //     radius: 30,
+            //     child: Text(
+            //       "4",
+            //       style: keywordTextStyle.copyWith(fontSize: 24),
+            //     ),
+            //   ),
+            //   title: 'Switch Bank',
+            //   subtitle: ' fdfsfds',
+            //   trailing: 'abcde',
+            // ),
+            // SlidableCategoryItem(
+            //   leading: CircleAvatar(
+            //     backgroundColor: Colors.white,
+            //     radius: 30,
+            //     child: Text(
+            //       "5",
+            //       style: keywordTextStyle.copyWith(fontSize: 24),
+            //     ),
+            //   ),
+            //   title: 'ADB Bank',
+            //   subtitle: ' fdfsfds',
+            //   trailing: 'abcde',
+            // ),
+            SlidableOfflineGateways(
               leading: CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: 30,
@@ -34,10 +100,11 @@ class _OfflineGatewaysState extends State<OfflineGateways> {
                 ),
               ),
               title: 'Bank of America',
-              subtitle: ' fdfsfds',
-              trailing: 'abcde',
             ),
-            SlidableCategoryItem(
+            SizedBox(
+              height: 20,
+            ),
+            SlidableOfflineGateways(
               leading: CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: 30,
@@ -47,10 +114,11 @@ class _OfflineGatewaysState extends State<OfflineGateways> {
                 ),
               ),
               title: 'Bank of Asia',
-              subtitle: ' fdfsfds',
-              trailing: 'abcde',
             ),
-            SlidableCategoryItem(
+            SizedBox(
+              height: 20,
+            ),
+            SlidableOfflineGateways(
               leading: CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: 30,
@@ -60,10 +128,11 @@ class _OfflineGatewaysState extends State<OfflineGateways> {
                 ),
               ),
               title: 'Fedarel Reserve Bank',
-              subtitle: ' fdfsfds',
-              trailing: 'abcde',
             ),
-            SlidableCategoryItem(
+            SizedBox(
+              height: 20,
+            ),
+            SlidableOfflineGateways(
               leading: CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: 30,
@@ -73,10 +142,11 @@ class _OfflineGatewaysState extends State<OfflineGateways> {
                 ),
               ),
               title: 'Switch Bank',
-              subtitle: ' fdfsfds',
-              trailing: 'abcde',
             ),
-            SlidableCategoryItem(
+            SizedBox(
+              height: 20,
+            ),
+            SlidableOfflineGateways(
               leading: CircleAvatar(
                 backgroundColor: Colors.white,
                 radius: 30,
@@ -86,8 +156,6 @@ class _OfflineGatewaysState extends State<OfflineGateways> {
                 ),
               ),
               title: 'ADB Bank',
-              subtitle: ' fdfsfds',
-              trailing: 'abcde',
             )
           ],
         ),

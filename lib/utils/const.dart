@@ -24,3 +24,5 @@ List<String> payment = ['Pending', 'Completed', 'Rejected'];
 String? select_payment_status = 'Pending';
 List<String> actions = ['Details', 'Invoice', 'Delete'];
 String? selected_action = 'Details';
+List<String> todo = ['Active', 'Deactive'];
+String? selected_todo = 'Active';

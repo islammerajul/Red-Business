@@ -11,10 +11,11 @@ class CustomTextField extends StatelessWidget {
       this.sufffixIcon,
       this.labelText,
       this.onTap,
+      this.textStyle,
       this.controller})
       : super(key: key);
   String? title, hintText, labelText;
-  TextStyle? hintStyle;
+  TextStyle? hintStyle, textStyle;
   int? maxlines;
   dynamic onTap;
   Widget? sufffixIcon;
@@ -27,7 +28,7 @@ class CustomTextField extends StatelessWidget {
       children: [
         Text(
           title!,
-          style: keywordTextStyle,
+          style: textStyle,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
@@ -35,6 +36,8 @@ class CustomTextField extends StatelessWidget {
             controller: controller,
             onTap: onTap,
             decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.grey[200],
                 labelText: labelText,
                 suffixIcon: sufffixIcon,
                 hintText: hintText,
