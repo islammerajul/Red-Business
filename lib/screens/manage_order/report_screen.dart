@@ -65,6 +65,19 @@ class _ReportScreenState extends State<ReportScreen> {
     });
   }
 
+  void _showDatePickerSecond() {
+    showDatePicker(
+            context: context,
+            initialDate: today,
+            firstDate: DateTime.utc(2010, 1, 1),
+            lastDate: DateTime.utc(2030, 12, 31))
+        .then((value) {
+      setState(() {
+        today = value!;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,6 +96,8 @@ class _ReportScreenState extends State<ReportScreen> {
                 controller: _fromDateController,
                 labelText: today.toString().split(" ")[0],
                 title: 'From',
+                textStyle: keywordTextStyle.copyWith(
+                    fontWeight: FontWeight.w600, fontSize: 18),
                 sufffixIcon: IconButton(
                     onPressed: _showDatePicker,
                     icon: Icon(Icons.calendar_month_outlined)),
@@ -103,8 +118,10 @@ class _ReportScreenState extends State<ReportScreen> {
                 controller: _toDateController,
                 labelText: today.toString().split(" ")[0],
                 title: 'To',
+                textStyle: keywordTextStyle.copyWith(
+                    fontWeight: FontWeight.w600, fontSize: 18),
                 sufffixIcon: IconButton(
-                    onPressed: _showDatePicker,
+                    onPressed: _showDatePickerSecond,
                     icon: Icon(Icons.calendar_month_outlined)),
               ),
               SizedBox(

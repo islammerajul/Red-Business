@@ -27,6 +27,7 @@ import 'package:red_business247/screens/shop_management_screens/categories.dart'
 import 'package:red_business247/screens/shop_management_screens/category_item_edit.dart';
 import 'package:red_business247/screens/shop_management_screens/coupons.dart';
 import 'package:red_business247/screens/shop_management_screens/edit_shipping_charge.dart';
+import 'package:red_business247/screens/shop_management_screens/items/item_screen.dart';
 import 'package:red_business247/screens/shop_management_screens/settings_screen.dart';
 import 'package:red_business247/screens/shop_management_screens/shipping_charge.dart';
 import 'package:red_business247/screens/shop_management_screens/subcategories.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Color(0xffdc2623),
       ),
-      home: SetPlugins(),
+      home: CustomBottomNavBar(),
     );
   }
 }
