@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:red_business247/register_user/customer_details.dart';
 import 'package:red_business247/screens/manage_order/report_screen.dart';
 import 'package:red_business247/screens/profile&password_screen/change_password.dart';
 import 'package:red_business247/utils/const.dart';
@@ -123,8 +124,11 @@ class _FixedInfoState extends State<FixedInfo> {
                 setState(() {
                   selected_actions = item;
                   if (selected_actions == 'Details') {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) => ReportScreen()));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => CustomerDetails(
+                              username: widget.value,
+                              email: widget.e_value,
+                            )));
                   }
                   if (selected_actions == 'Change Password') {
                     Navigator.of(context).push(MaterialPageRoute(

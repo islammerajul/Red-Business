@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:red_business247/screens/manage_order/report_screen.dart';
 import 'package:red_business247/utils/const.dart';
 import 'package:red_business247/widgets/custom_text_field.dart';
 import 'package:red_business247/widgets/fixed_info.dart';
@@ -15,6 +16,11 @@ class _RegisteredUsersState extends State<RegisteredUsers> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: Text("Registered Users"),
+          centerTitle: true,
+          backgroundColor: Theme.of(context).primaryColor,
+        ),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
