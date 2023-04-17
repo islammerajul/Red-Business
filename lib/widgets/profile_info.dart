@@ -40,7 +40,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Text(
             widget.fieldName!,
-            style: keywordTextStyle,
+            style: keywordTextStyle.copyWith(fontSize: 20),
           ),
         ),
         TextField(

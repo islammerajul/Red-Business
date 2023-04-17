@@ -17,9 +17,11 @@ import 'package:red_business247/screens/profile&password_screen/change_password.
 import 'package:red_business247/screens/profile&password_screen/edit_profile_screen.dart';
 import 'package:red_business247/screens/settings/breadcrumb.dart';
 import 'package:red_business247/screens/settings/color_settings.dart';
+import 'package:red_business247/screens/settings/email_settings/mail_templates.dart';
 import 'package:red_business247/screens/settings/favicon.dart';
 import 'package:red_business247/screens/settings/general_settings.dart';
 import 'package:red_business247/screens/settings/logo.dart';
+import 'package:red_business247/screens/settings/plugins.dart';
 import 'package:red_business247/screens/settings/preloader.dart';
 import 'package:red_business247/screens/settings/theme_screen.dart';
 import 'package:red_business247/screens/shop_management_screens/add_item/add_item_screen.dart';
@@ -53,7 +55,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Color(0xffdc2623),
       ),
-      home: RegisteredUsers(),
+      home: PluginsSettings(),
     );
   }
 }
