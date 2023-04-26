@@ -12,13 +12,15 @@ class CustomTextField extends StatelessWidget {
       this.labelText,
       this.onTap,
       this.textStyle,
-      this.controller})
+      this.controller,
+      this.fillColor})
       : super(key: key);
   String? title, hintText, labelText;
   TextStyle? hintStyle, textStyle;
   int? maxlines;
   dynamic onTap;
   Widget? sufffixIcon;
+  Color? fillColor = Colors.grey[200];
   TextEditingController? controller;
 
   @override
@@ -37,7 +39,7 @@ class CustomTextField extends StatelessWidget {
             onTap: onTap,
             decoration: InputDecoration(
                 filled: true,
-                fillColor: Colors.grey[200],
+                fillColor: fillColor,
                 labelText: labelText,
                 suffixIcon: sufffixIcon,
                 hintText: hintText,

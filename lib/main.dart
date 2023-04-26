@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:red_business247/home/hero_section.dart';
+import 'package:red_business247/home/home_section.dart';
 import 'package:red_business247/register_user/registered_users.dart';
 import 'package:red_business247/screens/custom_bottom_nav_bar.dart';
 import 'package:red_business247/screens/home_screen.dart';
@@ -55,7 +57,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Color(0xffdc2623),
       ),
-      home: PluginsSettings(),
+      home: HomeSection(),
     );
   }
 }
