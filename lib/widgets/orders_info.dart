@@ -95,8 +95,8 @@
 //                       });
 //                     }),
 //               )
-//             ],
-//           ),
+//  ],
+// ),
 //           SizedBox(
 //             height: 20,
 //           ),
@@ -197,6 +197,44 @@
 //           )
 //         ],
 //       ),
+//     );
+//   }
+// }
+
+//This code is generated for practice purpose
+//
+// import 'package:flutter/material.dart';
+//
+// class Order extends StatefulWidget {
+//   const Order({Key? key}) : super(key: key);
+//
+//   @override
+//   State<Order> createState() => _OrderState();
+// }
+//
+// class _OrderState extends State<Order> {
+//   List<String> lan = ['Arabic', 'Bangla', 'English'];
+//   String? _selectedLan = 'Arabic';
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Order"),
+//         centerTitle: true,
+//       ),
+//       body: DropdownButtonFormField(
+//           value: _selectedLan,
+//           items: lan.map((e) {
+//             return DropdownMenuItem(
+//               child: Text(e),
+//               value: e,
+//             );
+//           }).toList(),
+//           onChanged: (newValue) {
+//             setState(() {
+//               _selectedLan = newValue;
+//             });
+//           }),
 //     );
 //   }
 // }

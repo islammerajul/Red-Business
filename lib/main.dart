@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:red_business247/home/brand_partners.dart';
+import 'package:red_business247/home/choose_us_section.dart';
 import 'package:red_business247/home/hero_section.dart';
 import 'package:red_business247/home/home_section.dart';
+import 'package:red_business247/home/testimonial/add_testimonial.dart';
+import 'package:red_business247/home/testimonial/testimonial_screen.dart';
 import 'package:red_business247/register_user/registered_users.dart';
 import 'package:red_business247/screens/custom_bottom_nav_bar.dart';
 import 'package:red_business247/screens/home_screen.dart';
@@ -38,6 +42,7 @@ import 'package:red_business247/screens/shop_management_screens/shipping_charge.
 import 'package:red_business247/screens/shop_management_screens/subcategories.dart';
 import 'package:red_business247/screens/signup_screen.dart';
 import 'package:red_business247/screens/splash_screen.dart';
+import 'package:red_business247/widgets/orders_info.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -57,7 +62,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         primaryColor: Color(0xffdc2623),
       ),
-      home: HomeSection(),
+      home: TestimonialScreen(),
     );
   }
 }

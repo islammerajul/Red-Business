@@ -26,21 +26,24 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // ignore: sort_child_properties_last
-      child: TextFormField(
-        controller: controller,
-        validator: validator!,
-        obscureText: obscureText!,
-        decoration: InputDecoration(
-          // filled: true,
-          // fillColor: const Color(0xffF7F7F7),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(borderRadius!),
-            //borderSide: BorderSide.none
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: TextFormField(
+          controller: controller,
+          validator: validator,
+          obscureText: obscureText!,
+          decoration: InputDecoration(
+            // filled: true,
+            // fillColor: const Color(0xffF7F7F7),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(borderRadius!),
+              //borderSide: BorderSide.none
+            ),
+            hintText: hintText,
+            suffixIcon: suffixIcon,
+            prefixIcon: preffixIcon,
+            hintStyle: hintStyle,
           ),
-          hintText: hintText,
-          suffixIcon: suffixIcon,
-          prefixIcon: preffixIcon,
-          hintStyle: hintStyle,
         ),
       ),
     );
