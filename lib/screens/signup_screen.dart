@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:red_business247/utils/routes/routes.dart';
+import 'package:red_business247/screens/navigation_bar_screens/custom_bottom_nav_bar.dart';
 import 'package:red_business247/screens/home_screen.dart';
 import 'package:red_business247/screens/login_screen.dart';
 import 'package:red_business247/screens/privacy_policy.dart';
@@ -236,8 +238,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       onTap: () {
                         if (_formkey.currentState!.validate()) {
                           print("All fields are valid");
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => HomeScreen()));
+                          Navigator.pushReplacementNamed(context, '/customNavigation-barScreen');
                         } else {
                           print("Something wrong");
                         }
@@ -264,8 +265,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 color: Color(0xffFF6B6B)),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => LoginScreen()));
+                                Navigator.pushReplacementNamed(context, '/login-screen');
                               })
                       ]))
                 ],

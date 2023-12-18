@@ -45,9 +45,48 @@ dependencies:
   fluttertoast: ^8.2.1
   flutter_colorpicker: ^1.0.3
 
+  appwrite: ^11.0.0
+  shared_preferences: ^2.2.0
+  another_flushbar: ^1.12.30 #Use this package if you need more customization when notifying your user. For Android developers, it is made to substitute toasts and snackbars.
+  awesome_dialog: ^3.1.0 #A new Flutter package project for simple and awesome dialogs
+
+  #state management
+  provider: ^6.0.5
+  path_provider: ^2.1.0 #A Flutter plugin for finding commonly used locations on the filesystem.
+  mobx: ^2.2.0
+  flutter_mobx: ^2.0.6+5 #Provides the Observer widget that listens to observables and automatically rebuilds on changes.
+  get_it: ^7.6.0
+  dio: ^5.3.2 #A powerful HTTP networking package for Dart/Flutter
+  sembast: ^3.5.0+1 #sembast db stands for Simple Embedded Application Store database
+  intl: ^0.18.1
+  xxtea: ^2.1.0 #XXTEA is a fast and secure encryption algorithm
+
+  #sentry:
+  sentry_flutter: ^7.9.0 #This package includes support to native crashes through Sentry's native SDKs: (Android and iOS). It will capture errors in the native layer, including (Java/Kotlin/C/C++ for Android and Objective-C/Swift for iOS).
+
+  #flutter webviewx:
+  webview_flutter: ^4.2.3 #A Flutter plugin that provides a WebView widget.
+  firebase_core: ^2.23.0
+
+  #lotee:
+  lottie: ^2.6.0 #Lottie is a mobile library for Android and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile!
+  url_launcher: ^6.1.12 #A Flutter plugin for launching a URL like final Uri _url = Uri.parse('https://flutter.dev');
+  http:  #A composable, Future-based library for making HTTP requests.
+
+
+  #email_sender:
+  flutter_email_sender: ^6.0.1 #Allows send emails from flutter using native platform functionality.
+  cached_network_image: ^3.2.3 #A flutter library to show images from the internet and keep them in the cache directory.
+  localization: 2.1.0
+  flutter_localization: ^0.1.10
+  flutter_svg: ^2.0.7
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  mobx_codegen: ^2.3.0
+  build_runner: ^2.4.6 #The build_runner package provides a concrete way of generating files using Dart code. Files are always generated directly on disk, and rebuilds are incremental - inspired by tools such as Bazel.
+  flutter_launcher_icons: ^0.13.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:red_business247/home/brand_partners.dart';
-import 'package:red_business247/home/choose_us_section.dart';
-import 'package:red_business247/home/hero_section.dart';
-import 'package:red_business247/home/home_section.dart';
-import 'package:red_business247/home/testimonial/add_testimonial.dart';
-import 'package:red_business247/home/testimonial/testimonial_screen.dart';
-import 'package:red_business247/register_user/registered_users.dart';
-import 'package:red_business247/screens/custom_bottom_nav_bar.dart';
+import 'package:red_business247/app.dart';
+import 'package:red_business247/utils/routes/routes.dart';
+import 'package:red_business247/screens/navigation_bar_screens/custom_bottom_nav_bar.dart';
 import 'package:red_business247/screens/home_screen.dart';
 import 'package:red_business247/screens/login_screen.dart';
-import 'package:red_business247/screens/main_screen.dart';
+import 'package:red_business247/screens/navigation_bar_screens/dashboard_screen.dart';
 import 'package:red_business247/screens/manage_order/all_orders.dart';
 import 'package:red_business247/screens/manage_order/completed_orders.dart';
 import 'package:red_business247/screens/manage_order/processing_order.dart';
@@ -18,7 +13,7 @@ import 'package:red_business247/screens/payment_gateways/offline_gateways.dart';
 import 'package:red_business247/screens/payment_gateways/online_gateways.dart';
 import 'package:red_business247/screens/payment_gateways/payment_gateways_options.dart';
 import 'package:red_business247/screens/payment_gateways/plugins.dart';
-import 'package:red_business247/screens/product_screen.dart';
+import 'package:red_business247/screens/navigation_bar_screens/product_screen.dart';
 import 'package:red_business247/screens/profile&password_screen/change_password.dart';
 import 'package:red_business247/screens/profile&password_screen/edit_profile_screen.dart';
 import 'package:red_business247/screens/settings/breadcrumb.dart';
@@ -49,20 +44,22 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Color(0xffdc2623),
-      ),
-      home: TestimonialScreen(),
-    );
-  }
-}
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//         primaryColor: Color(0xffdc2623),
+//       ),
+//       initialRoute: '/splash',
+//       routes: Routes.routes,
+//       //home: SplashScreen(),
+//     );
+//   }
+// }

@@ -1,10 +1,10 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:red_business247/screens/account_screen.dart';
-import 'package:red_business247/screens/main_screen.dart';
-import 'package:red_business247/screens/order_screen.dart';
-import 'package:red_business247/screens/product_screen.dart';
-import 'package:red_business247/screens/shortcuts_screen.dart';
+import 'package:red_business247/screens/navigation_bar_screens/account_screen.dart';
+import 'package:red_business247/screens/navigation_bar_screens/dashboard_screen.dart';
+import 'package:red_business247/screens/navigation_bar_screens/order_screen.dart';
+import 'package:red_business247/screens/navigation_bar_screens/product_screen.dart';
+import 'package:red_business247/screens/navigation_bar_screens/shortcuts_screen.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({Key? key}) : super(key: key);
@@ -16,7 +16,7 @@ class CustomBottomNavBar extends StatefulWidget {
 class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   int _selectedIndex = 0;
   final List screens = <Widget>[
-    MainScreen(),
+    DashboardScreen(),
     ProductScreen(),
     OrderScreen(),
     ShortcutsScreen(),

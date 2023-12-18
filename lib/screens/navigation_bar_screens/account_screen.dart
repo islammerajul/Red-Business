@@ -22,6 +22,7 @@ class _AccountScreenState extends State<AccountScreen> {
           "Account",
         ),
         centerTitle: true,
+        leading: SizedBox(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(6.0),

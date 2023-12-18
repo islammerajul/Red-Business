@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:red_business247/home/testimonial/add_testimonial.dart';
-import 'package:red_business247/home/testimonial/edit_testimonial_info.dart';
 import 'package:red_business247/models/testimonial_model.dart';
+import 'package:red_business247/screens/home/testimonial/add_testimonial.dart';
+import 'package:red_business247/screens/home/testimonial/edit_testimonial_info.dart';
 import 'package:red_business247/utils/const.dart';
 import 'package:red_business247/widgets/custom_text_form_field.dart';
 

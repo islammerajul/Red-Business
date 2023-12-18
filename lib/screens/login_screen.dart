@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:red_business247/models/login_model.dart';
+import 'package:red_business247/utils/routes/routes.dart';
+import 'package:red_business247/screens/navigation_bar_screens/custom_bottom_nav_bar.dart';
 import 'package:red_business247/screens/home_screen.dart';
 import 'package:red_business247/screens/privacy_policy.dart';
 import 'package:red_business247/screens/signup_screen.dart';
@@ -124,12 +126,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Align(
                       alignment: Alignment.topRight,
-                      child: Text(
-                        "Forgot Password?",
-                        style: keywordTextStyle.copyWith(
-                            color: Color(0xffFF6B6B),
-                            fontWeight: FontWeight.w900,
-                            fontSize: 18),
+                      child: TextButton(
+                        onPressed: (){
+                          Navigator.pushReplacementNamed(context, Routes.passwordChangeScreen);
+                        },
+                        child: Text(
+                          "Forgot Password?",
+                          style: keywordTextStyle.copyWith(
+                              color: Color(0xffFF6B6B),
+                              fontWeight: FontWeight.w900,
+                              fontSize: 18),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -139,8 +146,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onTap: () {
                         if (_formkey.currentState!.validate()) {
                           print("All fields are valid");
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => HomeScreen()));
+                          Navigator.pushReplacementNamed(context, '/customNavigation-barScreen');
                           final contact = LoginInfo(
                               email: _emailController.text,
                               password: _passwordController.text);
@@ -210,8 +216,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   color: Color(0xffFF6B6B)),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => SignUpScreen()));
+                                  Navigator.pushReplacementNamed(context, '/signup-screen');
                                 })
                         ]))
                   ],

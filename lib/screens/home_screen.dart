@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:red_business247/utils/routes/routes.dart';
 import 'package:red_business247/screens/login_screen.dart';
 import 'package:red_business247/screens/signup_screen.dart';
 import 'package:red_business247/utils/const.dart';
@@ -75,6 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Expanded(
                       child: InkWell(
+
                         child: Container(
                           height: 50,
                           decoration: button == 0
@@ -90,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           setState(() {
                             print(button);
                             button = 0;
+                            Navigator.pushReplacementNamed(context, Routes.signupScreen);
                           });
                           // Navigator.of(context).push(MaterialPageRoute(
                           //     builder: (context) => SignUpScreen()));
@@ -113,6 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           setState(() {
                             button = 1;
                             print(button);
+                            Navigator.pushReplacementNamed(context, Routes.loginScreen);
                           });
                           // Navigator.of(context).push(MaterialPageRoute(
                           //     builder: (context) => LoginScreen()));

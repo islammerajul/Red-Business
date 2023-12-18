@@ -4,14 +4,14 @@ import 'package:red_business247/widgets/custom_box.dart';
 import 'package:red_business247/widgets/custom_large_box.dart';
 import 'package:red_business247/widgets/storelink_widget.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({Key? key}) : super(key: key);
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<DashboardScreen> createState() => _DashboardScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
