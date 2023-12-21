@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:red_business247/models/brand_model.dart';
 import 'package:red_business247/utils/const.dart';
 import 'package:red_business247/widgets/custom_text_field.dart';
@@ -16,6 +19,75 @@ class _BrandPartnersState extends State<BrandPartners> {
 
   TextEditingController _brandURLController = TextEditingController();
   TextEditingController _serialController = TextEditingController();
+
+  final TextEditingController _imagePathController = TextEditingController();
+
+  File? imageFile;
+  String? selected_img;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
+
+  Future<void> _showSimpleDialog() async {
+    await showDialog<void>(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return SimpleDialog(
+            // <-- SEE HERE
+            title: const Text('Select a way for upload'),
+            children: <Widget>[
+              SimpleDialogOption(
+                onPressed: () {
+                  _getFromGallery();
+                  Navigator.of(context).pop();
+                },
+                child: const Text('Gallery'),
+              ),
+              SimpleDialogOption(
+                onPressed: () {
+                  _getFromCamera();
+                  Navigator.of(context).pop();
+                },
+                child: const Text('Camera'),
+              ),
+            ],
+          );
+        });
+  }
+
+  _getFromGallery() async {
+    // PickedFile? pickedFile = await ImagePicker()
+    //     .getImage(source: ImageSource.gallery, maxWidth: 1800, maxHeight: 1800);
+    final imagePicker = ImagePicker();
+    final pickedFile = await imagePicker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() {
+        imageFile = File(pickedFile.path);
+        _imagePathController.text = pickedFile.path;
+        selected_img = _imagePathController.text;
+        print("Image Info ::: ${selected_img}");
+      });
+    }
+  }
+
+  _getFromCamera() async {
+    // PickedFile? pickedFile = await ImagePicker()
+    //     .getImage(source: ImageSource.camera, maxWidth: 1800, maxHeight: 1800);
+    final imagePicker = ImagePicker();
+    final pickedFile = await imagePicker.pickImage(source: ImageSource.camera);
+    if (pickedFile != null) {
+      setState(() {
+        imageFile = File(pickedFile.path);
+        _imagePathController.text = pickedFile.path;
+        selected_img = _imagePathController.text;
+        print("Image Info ::: ${selected_img}");
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,25 +146,37 @@ class _BrandPartnersState extends State<BrandPartners> {
                               Padding(
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 10),
-                                child: Container(
-                                    height: 150,
-                                    width: 120,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(width: 0.5),
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                    child: Center(
-                                      child: Image.asset(
-                                        "assets/icons/No_Image.png",
-                                        fit: BoxFit.fill,
-                                      ),
-                                    )),
+                                child:  Container(
+                                        height: 150,
+                                        width: 120,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(width: 0.5),
+                                          borderRadius:
+                                              BorderRadius.circular(5),
+                                        ),
+                                        child: imageFile == null
+                                            ? Center(
+                                          child: Image.asset(
+                                            "assets/icons/No_Image.png",
+                                            fit: BoxFit.fill,
+                                          ),
+                                        )
+                                            : Container(
+                                            child: Image.file(
+                                              imageFile!,
+                                              height: 150,
+                                              width: 120,
+                                              fit: BoxFit.cover,
+                                            ))),
                               ),
                               SizedBox(
                                 height: 20,
                               ),
                               ElevatedButton(
-                                  onPressed: () {}, child: Text("Choose File")),
+                                  onPressed: () {
+                                    _showSimpleDialog();
+                                  },
+                                  child: Text("Choose File")),
                               SizedBox(
                                 height: 20,
                               ),

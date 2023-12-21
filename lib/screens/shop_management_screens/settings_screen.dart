@@ -137,8 +137,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 100),
                 child: CustomButton(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => CategoriesScreen()));
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => CategoriesScreen()));
                     },
                     buttonText: 'Submit',
                     myTextStyle: myTextStyle.copyWith(

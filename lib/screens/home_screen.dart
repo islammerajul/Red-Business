@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemCount: name.length,
                     itemBuilder: (BuildContext context, int index) {
                       return CircleAvatar(
-                        radius: 200,
+                        radius: 180,
                         child: Text("${name[index]}"),
                       );
                     }),

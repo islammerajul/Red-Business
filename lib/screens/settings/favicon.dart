@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:red_business247/screens/shop_management_screens/categories.dart';
 import 'package:red_business247/utils/const.dart';
 import 'package:red_business247/widgets/choose_file.dart';
 import 'package:red_business247/widgets/custom_button.dart';

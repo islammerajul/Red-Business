@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:red_business247/app.dart';
+import 'package:red_business247/screens/add_product.dart';
+import 'package:red_business247/screens/home/brand_partners.dart';
+import 'package:red_business247/screens/home/choose_us_section.dart';
+import 'package:red_business247/screens/home/hero_section.dart';
+import 'package:red_business247/screens/home/home_section.dart';
+import 'package:red_business247/screens/order_section/all_orders.dart';
+import 'package:red_business247/screens/register_user/registered_users.dart';
+import 'package:red_business247/screens/shop_management_screens/items/item_details.dart';
 import 'package:red_business247/utils/routes/routes.dart';
 import 'package:red_business247/screens/navigation_bar_screens/custom_bottom_nav_bar.dart';
 import 'package:red_business247/screens/home_screen.dart';
 import 'package:red_business247/screens/login_screen.dart';
 import 'package:red_business247/screens/navigation_bar_screens/dashboard_screen.dart';
-import 'package:red_business247/screens/manage_order/all_orders.dart';
-import 'package:red_business247/screens/manage_order/completed_orders.dart';
-import 'package:red_business247/screens/manage_order/processing_order.dart';
-import 'package:red_business247/screens/manage_order/report_screen.dart';
 import 'package:red_business247/screens/payment_gateways/offline_gateways.dart';
 import 'package:red_business247/screens/payment_gateways/online_gateways.dart';
 import 'package:red_business247/screens/payment_gateways/payment_gateways_options.dart';
@@ -60,6 +64,7 @@ void main() {
 //       initialRoute: '/splash',
 //       routes: Routes.routes,
 //       //home: SplashScreen(),
+//       //home: ChooseUs(),
 //     );
 //   }
 // }

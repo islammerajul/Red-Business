@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/home-screen');
+      Navigator.pushNamed(context, '/home-screen');
     });
     return SafeArea(
       child: Scaffold(

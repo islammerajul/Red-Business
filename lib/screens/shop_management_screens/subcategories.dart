@@ -106,7 +106,7 @@ class _SubcategoryState extends State<Subcategory> {
                   backgroundColor: Colors.white,
                   radius: 30,
                   child: Image.asset(
-                    "assets/icons/women_dress.png",
+                    "assets/icons/womanclothes.png",
                     width: 35,
                     fit: BoxFit.cover,
                   ),
@@ -121,7 +121,7 @@ class _SubcategoryState extends State<Subcategory> {
                   backgroundColor: Colors.white,
                   radius: 30,
                   child: Image.asset(
-                    "assets/icons/wen's_dress.jpg",
+                    "assets/icons/shirt.png",
                     width: 35,
                     fit: BoxFit.cover,
                   ),

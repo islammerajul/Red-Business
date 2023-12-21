@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:red_business247/screens/navigation_bar_screens/account_screen.dart';
 import 'package:red_business247/screens/add_product.dart';
-import 'package:red_business247/screens/categories.dart';
-import 'package:red_business247/screens/select_product.dart';
+import 'package:red_business247/screens/navigation_bar_screens/product_screen_details/categories.dart';
+import 'package:red_business247/screens/navigation_bar_screens/product_screen_details/select_product.dart';
+import 'package:red_business247/screens/shop_management_screens/categories.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _ProductScreenState extends State<ProductScreen> {
             ]),
           ),
           body: TabBarView(
-              children: [SelectProduct(), Categories(), AccountScreen()]),
+              children: [SelectProduct(), Categories(), CategoriesScreen()]),
         ),
       ),
     );

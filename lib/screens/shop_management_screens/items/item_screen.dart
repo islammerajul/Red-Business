@@ -43,8 +43,8 @@ class _ItemScreenState extends State<ItemScreen> {
                             builder: (context) => ItemDetails()));
                       },
                       child: Container(
-                        height: 170,
-                        width: 170,
+                        //height: 170,
+                        //width: 170,
                         child: Column(
                           children: [
                             Image.asset(
